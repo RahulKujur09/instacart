@@ -9,7 +9,7 @@ from src.logger import logging
 def get_watermark():
     try:
         try:
-            with open(WATERMARK_FILE, "a") as f:
+            with open(WATERMARK_FILE, "r") as f:
                 return json.load(f)
         except FileNotFoundError:
             return None

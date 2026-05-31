@@ -7,17 +7,17 @@ sys.path.append(
     )
 )
 
-from src.monitoring.pipeline_logger import PipeLineLogger
+from src.monitoring.pipeline_logger import PipelineLogger
 
 
-PipeLineLogger.log_start("orders_ingestion")
+PipelineLogger.log_start("orders_ingestion")
 
 try:
     x = 10 / 2
 except Exception as e:
-    PipeLineLogger.log_failure(
+    PipelineLogger.log_failure(
         "orders_ingestion",
         str(e)
     )
 
-PipeLineLogger.log_end("orders_ingestion")
+PipelineLogger.log_end("orders_ingestion")

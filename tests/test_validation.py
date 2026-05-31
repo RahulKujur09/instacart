@@ -24,7 +24,7 @@ from constants.schema import EXPECTED_ORDER_COLUMNS
 spark = create_spark_session()
 orders = OrdersIngestion(spark)
 
-df = orders.ingest("D:/instacart_market_busket_analysis/data/raw/orders.csv")
+df = orders.ingest("data/raw/orders.csv")
 
 schame_valid = validate_columns(df, EXPECTED_ORDER_COLUMNS)
 

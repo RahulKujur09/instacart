@@ -1,0 +1,12 @@
+app:
+  name: Instacart Basket Analysis Test
+
+spark:
+  app_name: Instacart Basket Analysis Test
+  master : local[*]
+
+paths:
+  raw: data/raw
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold

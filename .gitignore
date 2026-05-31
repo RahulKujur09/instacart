@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+
+# Data
+data/
+raw/
+bronze/
+silver/
+gold/
+aisles.csv
+departments.csv
+order_products__prior.csv
+order_products__train.csv
+orders.csv
+products.csv
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

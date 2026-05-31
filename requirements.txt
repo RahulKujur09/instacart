@@ -1,0 +1,7 @@
+pyspark==3.5.6
+pandas
+pyyaml
+sqlalchemy
+pyodbc
+pytest
+shutils

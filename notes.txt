@@ -1,0 +1,119 @@
+### Folder Structure
+
+│   .gitignore
+│   main.py
+│   README.md
+│   requirements.txt
+│   
+├───artifacts
+├───configs
+│       dev.yaml
+│       prod.yaml
+│       test.yaml
+│       __init__.py
+│       
+├───constants
+│       constant.py
+│       path.py
+│       __init__.py
+│       
+├───data
+│   ├───archive
+│   ├───bad_records
+│   ├───bronze
+│   ├───gold
+│   ├───landing
+│   ├───raw
+│   └───silver
+├───docs
+├───logs
+│   ├───ingestion
+│   ├───pipeline
+│   ├───transformation
+│   └───validation
+├───notebooks
+├───sql
+│       create_database.sql
+│       create_table.sql
+│       procedures.sql
+│       
+├───src
+│   │   configs.py
+│   │   exception.py
+│   │   logger.py
+│   │   __init__.py
+│   │   
+│   ├───ingestion
+│   │       ingest_orders.py
+│   │       ingest_products.py
+│   │       __init__.py
+│   │       
+│   ├───metadata
+│   │       watermark_manager.py
+│   │       __init__.py
+│   │       
+│   ├───monitoring
+│   │       pipeline_logger.py
+│   │       __init__.py
+│   │       
+│   ├───pipeline
+│   │       batch_pipeline.py
+│   │       training_pipeline.py
+│   │       __init__.py
+│   │       
+│   ├───transformation
+│   │       bronze_to_silver.py
+│   │       silver_to_gold.py
+│   │       __init__.py
+│   │       
+│   ├───utils
+│   │       db_utils.py
+│   │       file_utils.py
+│   │       spark_utils.py
+│   │       __init__.py
+│   │       
+│   └───validation
+│           null_validation.py
+│           schema_validation.py
+│           __init__.py
+│           
+└───tests
+
+__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o__o
+
+--> after setup of folder Structure
+    --> requirements.txt
+        --> install requirements
+    --> Then in src\logger.py
+        --> configure logging
+    --> Then in src\exception
+        --> configure CustomException
+    --> Then in constants\constants.py
+        --> list all the pyspark requirements
+            like APP_NAME, MASTER = "local[*]", DEFAULT_SHUFFEL_PARTITIONS, RAW_FORMAT, CURRENT_ENV
+    --> THEN constants\path.py
+        --> Define all the path for the data
+            data
+            ├───bronze
+            ├───gold
+            ├───raw
+            └───silver
+
+    --> Then in config\dev.yaml, config\test.yaml, config\prod.yaml
+        configure the same
+            app:
+                name:
+            spark:
+                app_name:
+                master:
+            path:
+                raw:
+                bronze:
+                silver:
+                gold:
+    --> Then in src\utils\file_utils
+        write functions to
+            - create directory
+            - list file
+            - move file
+            - delete file

@@ -32,3 +32,11 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+logs/
+artifacts/
+
+test_output/
+
+.vscode/
+.idea/
